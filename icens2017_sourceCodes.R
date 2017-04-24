@@ -1,3 +1,8 @@
+#
+# This file is prepared by Ismail KIRBAS
+# You can reach  by e-mail ismkir@gmail.com
+#
+
 library(readr)
 library(fitdistrplus)
 library(ggplot2)
@@ -56,7 +61,6 @@ ggplot(data = t1, aes(x = x, y = y)) +
 # Weibull Gamma 
 par(mfrow = c(2, 2))
 plot.legend <- c("Weibull", "Gamma")
-?denscomp
 denscomp(list(fit.weibull, fit.gamma), fitcol = c("red", "blue"), legendtext = plot.legend, xlab="Wind Speed(m/s)")
 qqcomp(list(fit.weibull, fit.gamma), fitcol = c("red", "blue"), legendtext = plot.legend)
 cdfcomp(list(fit.weibull, fit.gamma), fitcol = c("red", "blue"), legendtext = plot.legend, xlab="Wind Speed(m/s)")
